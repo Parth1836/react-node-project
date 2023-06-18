@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../../redux-store/actions/taskActions";
+import { addTodo } from "../../redux-store/redux-toolkit-code/slices/taskSlice";
 
 const Task = () => {
   const dispatch = useDispatch();

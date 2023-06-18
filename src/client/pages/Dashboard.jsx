@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import TaskList from "./redux-pages/TaskLists";
 import Task from "./redux-pages/Tasks";
-import { userLogout } from "../redux-store/actions/userActions";
+import { userLogout } from "../redux-store/redux-toolkit-code/slices/userSlice";
 
 function Dashboard() {
   const dispatch = useDispatch();

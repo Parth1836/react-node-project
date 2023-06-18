@@ -1,7 +1,7 @@
 import "./App.css";
 import { useDispatch } from "react-redux";
 import MainRoutes from "./routes";
-import { setUserSession } from "./client/redux-store/actions/userActions";
+import { setUserSession } from "./client/redux-store/redux-toolkit-code/slices/userSlice";
 
 function App() {
   const dispatch = useDispatch();

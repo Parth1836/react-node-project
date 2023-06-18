@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteTodo } from "../../redux-store/actions/taskActions";
+import { deleteTodo } from "../../redux-store/redux-toolkit-code/slices/taskSlice";
 
 const TaskList = () => {
-  const tasksList = useSelector((state) => state.tasksList);
-  console.log("--7-tasks", tasksList);
+  const tasksLists = useSelector((state) => state.taskLists);
+  console.log("--7-tasks", tasksLists);
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
@@ -17,7 +17,7 @@ const TaskList = () => {
         <h3> Your tasks: </h3>{" "}
         <ul className="tasks">
           {" "}
-          {tasksList.tasks?.map((task) => (
+          {tasksLists?.tasks?.map((task) => (
             <li className="task" key={task.id}>
               {" "}
               {task.text}{" "}
