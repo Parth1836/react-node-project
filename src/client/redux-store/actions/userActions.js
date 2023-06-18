@@ -1,4 +1,7 @@
-import { SET_USER_SESSION } from "../../constants/redux-constants/users";
+import {
+  SET_USER_SESSION,
+  USER_LOGOUT,
+} from "../../constants/redux-constants/users";
 
 export const setUserSession = (payload) => {
   return {
@@ -9,5 +12,12 @@ export const setUserSession = (payload) => {
       userEmail: payload.userEmail,
       userRole: payload.userRole,
     },
+  };
+};
+
+export const userLogout = () => {
+  return {
+    type: USER_LOGOUT,
+    payload: {},
   };
 };

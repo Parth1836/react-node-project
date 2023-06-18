@@ -1,4 +1,7 @@
-import { SET_USER_SESSION } from "../../constants/redux-constants/users";
+import {
+  SET_USER_SESSION,
+  USER_LOGOUT,
+} from "../../constants/redux-constants/users";
 
 const initialState = {
   userSession: {},
@@ -9,6 +12,8 @@ const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER_SESSION:
       return { userSession: action.payload };
+    case USER_LOGOUT:
+      return { userSession: {} };
     default:
       return state;
   }
