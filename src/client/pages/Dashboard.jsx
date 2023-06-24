@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import Axios from "axios";
 import TaskList from "./redux-pages/TaskLists";
 import Task from "./redux-pages/Tasks";
 import { userLogout } from "../redux-store/redux-toolkit-code/slices/userSlice";
@@ -15,6 +17,15 @@ function Dashboard() {
       dispatch(userLogout());
     }
   };
+  const loadMasterData = async () => {
+    const data = await Axios.get("/api/user");
+    console.log("data", data.data.data);
+  };
+  useEffect(() => {
+    console.log("hi ");
+    loadMasterData();
+    // createData({ id: 3, name: "julubar" });
+  }, []);
   return (
     <div>
       <button
