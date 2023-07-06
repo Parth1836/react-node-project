@@ -9,6 +9,7 @@ function Dashboard() {
   const dispatch = useDispatch();
   const userSession = useSelector((state) => state.userSession);
   console.log("userSession", userSession);
+
   const logout = () => {
     if (
       Object.keys(userSession?.userSession).length !== 0 &&
