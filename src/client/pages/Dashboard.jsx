@@ -17,13 +17,15 @@ function Dashboard() {
       dispatch(userLogout());
     }
   };
+
   const loadMasterData = async () => {
     const data = await Axios.get("/api/user");
     console.log("data", data.data.data);
   };
+
   useEffect(() => {
     console.log("hi ");
-    loadMasterData();
+    // loadMasterData();
     // createData({ id: 3, name: "julubar" });
   }, []);
   return (
